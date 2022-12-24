@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import LoginRegister from './login-register'
 import Products from './products'
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Products />
+        {/* <Products /> */}
+        <LoginRegister />
       </main>
     </>
   )
