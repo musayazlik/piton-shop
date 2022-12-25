@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['assignment-api.piton.com.tr'],
   },
+  ignoreBuildErrors: true,
 }
 
 module.exports = nextConfig
