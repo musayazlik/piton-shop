@@ -1,7 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import LoginRegister from './login-register'
-import Products from './products'
 
 export default function Home() {
   return (
@@ -12,11 +9,25 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <main>
-        {/* <Products /> */}
-        <LoginRegister />
-      </main>
     </>
   )
+}
+
+export const getServerSideProps = async (content: any) => {
+  const token = content.req.cookies.token
+  if (token) {
+    return {
+      redirect: {
+        destination: '/products',
+        permanent: false,
+      },
+    }
+  } else {
+    return {
+      redirect: {
+        destination: '/login-register',
+        permanent: false,
+      },
+    }
+  }
 }
