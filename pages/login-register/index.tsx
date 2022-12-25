@@ -1,6 +1,6 @@
 import Login from '@components/login'
 import Register from '@components/register'
-import LoginRegisterLayout from '@layouts/loginRegisterLayout'
+import LoginRegisterLayout from '@components/layouts/loginRegisterLayout'
 import React from 'react'
 
 const LoginRegister = () => {
@@ -19,3 +19,18 @@ const LoginRegister = () => {
 }
 
 export default LoginRegister
+
+export const getServerSideProps = async (content: any) => {
+  const token = content.req.cookies.token
+  if (token) {
+    return {
+      redirect: {
+        destination: '/products',
+        permanent: false,
+      },
+    }
+  }
+  return {
+    props: {},
+  }
+}
