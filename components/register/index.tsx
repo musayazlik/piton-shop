@@ -66,10 +66,6 @@ const Register = ({ setLogin }: Props) => {
               timer: 1500,
             })
           } else {
-            alert(
-              'You have successfully registered. You were being redirected to the products page.'
-            )
-
             axios({
               method: 'POST',
               url: 'https://assignment-api.piton.com.tr/api/v1/user/register',

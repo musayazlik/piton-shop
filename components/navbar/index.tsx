@@ -1,4 +1,5 @@
 import Button from '@components/button'
+import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
@@ -8,10 +9,12 @@ const Navbar = () => {
         <div className='container mx-auto'>
           <div className='flex justify-between items-center'>
             <div className='logo bg-blue-600 rounded-full'>
-              <h1 className='text-white font-medium text-3xl px-5 py-1.5'>
-                <span className='text-white'>Piton</span>
-                <span className='text-white/50'>Shop</span>
-              </h1>
+              <Link href='/'>
+                <h1 className='text-white font-medium text-3xl px-5 py-1.5'>
+                  <span className='text-white'>Piton</span>
+                  <span className='text-white/50'>Shop</span>
+                </h1>
+              </Link>
             </div>
             <div className='layout'>
               <Button
