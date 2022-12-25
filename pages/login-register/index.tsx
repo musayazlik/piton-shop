@@ -1,6 +1,6 @@
 import Login from '@components/login'
 import Register from '@components/register'
-import LoginRegisterLayout from 'layout/loginRegisterLayout'
+import LoginRegisterLayout from '@layouts/loginRegisterLayout'
 import React from 'react'
 
 const LoginRegister = () => {
