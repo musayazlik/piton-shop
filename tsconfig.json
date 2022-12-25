@@ -5,7 +5,8 @@
       "@styles/*": ["styles/*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
-      "@public/*": ["public/*"]
+      "@public/*": ["public/*"],
+      "@layouts/*": ["components/layouts/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
