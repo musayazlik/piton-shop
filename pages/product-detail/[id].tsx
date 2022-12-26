@@ -3,10 +3,17 @@ import Image from 'next/image'
 import React from 'react'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const ProductDetail = ({ product }: any) => {
   return (
     <>
+      <Head>
+        <title>{product.name}</title>
+        <meta name='description' content={product.description} />
+        <meta name='author' content='Musa Yazlık' />
+      </Head>
+
       <Navbar />
       <div className='container mx-auto'>
         <div className='context'>

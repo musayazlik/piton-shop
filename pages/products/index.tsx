@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Icon } from '@iconify/react'
 import Swal from 'sweetalert2'
+import Head from 'next/head'
 
 const Products = ({ products }: any) => {
   const router = useRouter()
@@ -34,6 +35,11 @@ const Products = ({ products }: any) => {
 
   return (
     <>
+      <Head>
+        <title>PitonShop - Products</title>
+        <meta name='description' content='PitonShop Products Page' />
+        <meta name='author' content='Musa Yazlık' />
+      </Head>
       <Navbar />
       <div className='container mx-auto'>
         <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 px-4 mb-20'>
