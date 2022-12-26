@@ -35,7 +35,7 @@ const ProductDetail = ({ product }: any) => {
                   src={`https://assignment-api.piton.com.tr${product.image}`}
                   alt={product.name}
                   fill
-                  objectFit='contain'
+                  className='object-contain'
                 />
               </div>
               <div className='product-details col-span-12 sm:col-span-9 flex flex-col justify-between items-end'>
@@ -63,9 +63,6 @@ export default ProductDetail
 
 export const getServerSideProps = async (context: any, params: any) => {
   const token = context.req.cookies.token
-  console.log(params)
-  console.log(context.params.id)
-
   const id = context.params.id
   const res = await fetch(
     `https://assignment-api.piton.com.tr/api/v1/product/get/${id}`,

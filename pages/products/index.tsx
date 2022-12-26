@@ -8,8 +8,6 @@ import Swal from 'sweetalert2'
 
 const Products = ({ products }: any) => {
   const router = useRouter()
-  console.log(products)
-
   const likeHandle = async (id: number, likes: number) => {
     const token = document.cookie.split('=')[1]
     const res = await fetch(
@@ -54,7 +52,7 @@ const Products = ({ products }: any) => {
                     src={`https://assignment-api.piton.com.tr${product.image}`}
                     alt={product.name}
                     fill
-                    objectFit='contain'
+                    className='object-contain'
                     quality={80}
                   />
                 </div>
