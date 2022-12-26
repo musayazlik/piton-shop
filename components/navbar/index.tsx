@@ -2,12 +2,20 @@ import Button from '@components/button'
 import Link from 'next/link'
 import React from 'react'
 import { useRouter } from 'next/router'
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
   const router = useRouter()
   const logout = () => {
-    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-    router.push('/login-register')
+    Swal.fire({
+      icon: 'success',
+      title: 'Logged out',
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+      router.push('/login-register')
+    })
   }
   return (
     <>
