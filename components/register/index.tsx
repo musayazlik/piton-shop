@@ -102,7 +102,7 @@ const Register = ({ setLogin }: Props) => {
     <>
       <form
         action=''
-        className='flex flex-col justify-start w-3/6 mx-auto'
+        className='flex flex-col justify-start w-5/6 sm:w-4/6 xl:w-3/6 mx-auto'
         onSubmit={(e) => {
           handleSubmit(e)
         }}>
