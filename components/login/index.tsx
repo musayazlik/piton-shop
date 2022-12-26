@@ -11,9 +11,9 @@ interface Props {
 
 const Login = ({ setLogin }: Props) => {
   const router = useRouter()
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
-    const data = new FormData(e.currentTarget)
+    const data: any = new FormData(e.currentTarget)
     const dataObj = Object.fromEntries(data.entries())
     const validatePassword =
       dataObj.password.match(/[^a-z0-9]+/i) === null ? true : false
