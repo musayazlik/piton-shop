@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     domains: ['assignment-api.piton.com.tr'],
   },
-  ignoreBuildErrors: true,
 }
 
 module.exports = nextConfig
