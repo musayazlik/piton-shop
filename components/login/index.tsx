@@ -13,7 +13,7 @@ const Login = ({ setLogin }: Props) => {
   const router = useRouter()
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const data = new FormData(e.currentTarget)
+    const data: any = new FormData(e.currentTarget)
     const dataObj = Object.fromEntries(data.entries())
     const validatePassword =
       dataObj.password.match(/[^a-z0-9]+/i) === null ? true : false
@@ -82,7 +82,7 @@ const Login = ({ setLogin }: Props) => {
     <>
       <form
         action=''
-        className='flex flex-col justify-start w-4/6 xl:w-3/6  mx-auto'
+        className='flex flex-col justify-start w-5/6 sm:w-4/6 xl:w-3/6  mx-auto'
         onSubmit={(e) => handleSubmit(e)}>
         <h2 className='font-black text-2xl ml-1 text-zinc-700'>Hello Again!</h2>
         <p className='font-normal text-md mb-4 ml-1'>Welcome Back</p>
